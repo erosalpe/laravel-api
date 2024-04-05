@@ -25,7 +25,7 @@
 
     <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
         @foreach($projects as $item)
-            <div class="card dimensioniCard" style="width: 18rem;">
+            <div class="card dimensioniCard text-center" style="width: 18rem;">
                 <img src="{{asset('/storage/'. $item->preview)}}" class="card-img-top" alt="{{$item['title']}}">
                 <div class="card-body">
                     <h5 class="card-title">{{$item['title']}}</h5>
@@ -36,7 +36,7 @@
                     </p>
                     <p class="card-text">{{$item['description']}}</p>
                     <p>{{$item['language']}}</p>
-                    <ul class="d-flex gap-2 unstyled flex-wrap p-0 m-0 pb-3">
+                    <ul class="d-flex gap-2 unstyled flex-wrap p-0 m-0 pb-3 justify-content-center">
                         @forelse($item->technologies as $technology)
                             <li class="badge text-bg-primary dimensioniPill">{{ $technology->name }}</li>
                             @empty
