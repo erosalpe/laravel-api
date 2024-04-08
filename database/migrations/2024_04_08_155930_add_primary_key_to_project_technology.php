@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('project_technology', function (Blueprint $table) {
-            $table->id('id');
+            $table->primary(['project_id', 'technology_id']);
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('project_technology', function (Blueprint $table) {
-            $table->dropColumn('id');
+            $table->dropPrimary(['project_id', 'technology_id']);
         });
     }
 };
